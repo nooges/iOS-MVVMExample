@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 freedom. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DXNMasterViewController.h"
 
-@interface ViewController ()
+@interface DXNMasterViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DXNMasterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

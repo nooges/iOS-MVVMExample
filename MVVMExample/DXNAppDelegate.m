@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 freedom. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "DXNAppDelegate.h"
 
-@interface AppDelegate ()
+@interface DXNAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation DXNAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
