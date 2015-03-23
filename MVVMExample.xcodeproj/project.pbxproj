@@ -14,6 +14,7 @@
 		3075852A1AC081E10013852A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 307585291AC081E10013852A /* Images.xcassets */; };
 		3075852D1AC081E10013852A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3075852B1AC081E10013852A /* LaunchScreen.xib */; };
 		307585391AC081E10013852A /* MVVMExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 307585381AC081E10013852A /* MVVMExampleTests.m */; };
+		30E725681AC0A7BE00B998BD /* DXNMasterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E725671AC0A7BE00B998BD /* DXNMasterViewModel.m */; };
 		6857728239F38CB87270A01C /* libPods-MVVMExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE00B966D0D39D1224DDE79 /* libPods-MVVMExampleTests.a */; };
 		FB4900610DE3D64825A790A7 /* libPods-MVVMExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADA3163955245C7F4A63DD7 /* libPods-MVVMExample.a */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 		307585321AC081E10013852A /* MVVMExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		307585371AC081E10013852A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		307585381AC081E10013852A /* MVVMExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMExampleTests.m; sourceTree = "<group>"; };
+		30E725661AC0A7BE00B998BD /* DXNMasterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXNMasterViewModel.h; sourceTree = "<group>"; };
+		30E725671AC0A7BE00B998BD /* DXNMasterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXNMasterViewModel.m; sourceTree = "<group>"; };
 		64D71E774B3237951DE9D65D /* Pods-MVVMExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMExampleTests/Pods-MVVMExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		6ADA3163955245C7F4A63DD7 /* libPods-MVVMExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE00B966D0D39D1224DDE79 /* libPods-MVVMExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +120,8 @@
 				307585211AC081E10013852A /* DXNAppDelegate.m */,
 				307585231AC081E10013852A /* DXNMasterViewController.h */,
 				307585241AC081E10013852A /* DXNMasterViewController.m */,
+				30E725661AC0A7BE00B998BD /* DXNMasterViewModel.h */,
+				30E725671AC0A7BE00B998BD /* DXNMasterViewModel.m */,
 				307585261AC081E10013852A /* Main.storyboard */,
 				307585291AC081E10013852A /* Images.xcassets */,
 				3075852B1AC081E10013852A /* LaunchScreen.xib */,
@@ -319,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				307585251AC081E10013852A /* DXNMasterViewController.m in Sources */,
+				30E725681AC0A7BE00B998BD /* DXNMasterViewModel.m in Sources */,
 				307585221AC081E10013852A /* DXNAppDelegate.m in Sources */,
 				3075851F1AC081E10013852A /* main.m in Sources */,
 			);

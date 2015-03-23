@@ -32,22 +32,11 @@
                                         <color key="textColor" red="0.396078431372549" green="0.4823529411764706" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wb-Ky-tYd">
-                                        <rect key="frame" x="106" y="135" width="89" height="30"/>
-                                        <state key="normal" title="Update Time">
-                                            <color key="titleColor" red="0.14901960784313725" green="0.54509803921568623" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="4Wb-Ky-tYd" secondAttribute="centerX" id="3VK-ex-9YX"/>
                                     <constraint firstAttribute="centerX" secondItem="oNB-kF-blm" secondAttribute="centerX" id="BXg-Cl-yLk"/>
-                                    <constraint firstAttribute="centerX" secondItem="4Wb-Ky-tYd" secondAttribute="centerX" id="E2Q-On-z0M"/>
                                     <constraint firstAttribute="height" constant="300" id="Hop-E3-krh"/>
-                                    <constraint firstItem="4Wb-Ky-tYd" firstAttribute="top" secondItem="o7R-Fw-bNS" secondAttribute="bottom" constant="19" id="Ml3-ga-lmw"/>
                                     <constraint firstAttribute="width" constant="300" id="baH-YG-JW9"/>
-                                    <constraint firstAttribute="centerY" secondItem="4Wb-Ky-tYd" secondAttribute="centerY" id="hga-NB-suf"/>
                                     <constraint firstItem="o7R-Fw-bNS" firstAttribute="top" secondItem="NIp-eq-nlH" secondAttribute="top" constant="80" id="mrQ-dg-Xcc"/>
                                     <constraint firstAttribute="bottom" secondItem="oNB-kF-blm" secondAttribute="bottom" constant="46" id="pzx-iP-eWM"/>
                                     <constraint firstAttribute="centerX" secondItem="o7R-Fw-bNS" secondAttribute="centerX" id="w9g-Lq-68s"/>
@@ -62,6 +51,10 @@
                             <constraint firstAttribute="centerX" secondItem="NIp-eq-nlH" secondAttribute="centerX" id="nXc-yg-ZAb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changeToStopwatchMode" destination="oNB-kF-blm" id="vPl-VO-l02"/>
+                        <outlet property="timeLabel" destination="o7R-Fw-bNS" id="Qm2-J3-ysp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

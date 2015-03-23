@@ -7,8 +7,12 @@
 //
 
 #import "DXNMasterViewController.h"
+#import "DXNMasterViewModel.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface DXNMasterViewController ()
+
+@property (nonatomic) DXNMasterViewModel *viewModel;
 
 @end
 
@@ -16,7 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.viewModel = [[DXNMasterViewModel alloc] init];
+    RAC(self.timeLabel, text) = RACObserve(self.viewModel, time);
+    [self.updateTimeButton addTarget:self.viewModel action:@selector(updateTime) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {

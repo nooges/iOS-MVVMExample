@@ -10,6 +10,9 @@
 
 @interface DXNMasterViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *updateTimeButton;
+@property (weak, nonatomic) IBOutlet UIButton *changeToStopwatchMode;
 
 @end
 
