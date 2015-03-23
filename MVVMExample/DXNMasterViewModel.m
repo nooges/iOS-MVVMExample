@@ -17,7 +17,7 @@
 
 @implementation DXNMasterViewModel
 
--(id)init {
+- (id)init {
     if (self = [super init]) {
         // Start timer
         _clockTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
@@ -30,10 +30,6 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     self.time = [dateFormatter stringFromDate:now];
-}
-
-- (void)goToStopwatch {
-    
 }
 
 @end

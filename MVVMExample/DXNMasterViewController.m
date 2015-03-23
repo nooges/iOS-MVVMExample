@@ -23,7 +23,11 @@
     
     self.viewModel = [[DXNMasterViewModel alloc] init];
     RAC(self.timeLabel, text) = RACObserve(self.viewModel, time);
-    [self.updateTimeButton addTarget:self.viewModel action:@selector(updateTime) forControlEvents:UIControlEventTouchUpInside];
+    [self.switchToStopwatchButton addTarget:self action:@selector(switchToStopwatch) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)switchToStopwatch {
+    //[self push]
 }
 
 - (void)didReceiveMemoryWarning {

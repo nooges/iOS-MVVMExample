@@ -1,5 +1,5 @@
 //
-//  DXNMasterViewModel.h
+//  DXNStopwatchViewModel.h
 //  MVVMExample
 //
 //  Created by Danny Nguyen on 3/23/15.
@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DXNMasterViewModel : NSObject
+@interface DXNStopwatchViewModel : NSObject
 
 @property (nonatomic) NSString *time;
+@property (nonatomic) BOOL stopwatchRunning;
+
+- (void)toggleStopwatch;
+- (void)resetStopwatch;
 
 @end

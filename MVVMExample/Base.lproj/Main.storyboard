@@ -25,10 +25,13 @@
                                             <color key="titleColor" red="0.14901960780000001" green="0.5450980392" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="0f2-Fk-xl0" kind="show" id="nVr-gJ-43g"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7R-Fw-bNS">
-                                        <rect key="frame" x="88" y="80" width="124" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="51" y="80" width="199" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                         <color key="textColor" red="0.396078431372549" green="0.4823529411764706" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -52,12 +55,88 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="changeToStopwatchMode" destination="oNB-kF-blm" id="vPl-VO-l02"/>
+                        <outlet property="switchToStopwatchButton" destination="oNB-kF-blm" id="nLn-fz-DxV"/>
                         <outlet property="timeLabel" destination="o7R-Fw-bNS" id="Qm2-J3-ysp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-86" y="414"/>
+        </scene>
+        <!--Stopwatch View Controller-->
+        <scene sceneID="Vbc-Sx-9Sw">
+            <objects>
+                <viewController id="0f2-Fk-xl0" customClass="DXNStopwatchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tmB-dy-csk"/>
+                        <viewControllerLayoutGuide type="bottom" id="d5L-2h-ZrM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EvJ-qd-tiM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hde-fh-1H4">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hal-TG-g6s">
+                                        <rect key="frame" x="96" y="224" width="108" height="30"/>
+                                        <state key="normal" title="Return to Clock">
+                                            <color key="titleColor" red="0.14901960780000001" green="0.5450980392" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-KO-ouX">
+                                        <rect key="frame" x="59" y="80" width="183" height="58"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                        <color key="textColor" red="0.39607843139999999" green="0.4823529412" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfb-1h-oYH">
+                                        <rect key="frame" x="60" y="156" width="51" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfi-WN-kFs">
+                                        <rect key="frame" x="179" y="156" width="61" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Hal-TG-g6s" secondAttribute="bottom" constant="46" id="30d-ER-8e6"/>
+                                    <constraint firstAttribute="centerX" secondItem="Spg-KO-ouX" secondAttribute="centerX" id="ANN-Cm-E1N"/>
+                                    <constraint firstAttribute="trailing" secondItem="kfi-WN-kFs" secondAttribute="trailing" constant="60" id="DhD-xG-bIW"/>
+                                    <constraint firstItem="Spg-KO-ouX" firstAttribute="top" secondItem="Hde-fh-1H4" secondAttribute="top" constant="80" id="HKk-eD-so4"/>
+                                    <constraint firstAttribute="height" constant="300" id="IgD-Jz-WQ8"/>
+                                    <constraint firstItem="yfb-1h-oYH" firstAttribute="leading" secondItem="Hde-fh-1H4" secondAttribute="leading" constant="60" id="Lfb-Vb-bB4"/>
+                                    <constraint firstItem="yfb-1h-oYH" firstAttribute="top" secondItem="Spg-KO-ouX" secondAttribute="bottom" constant="18" id="Mfd-AD-9UK"/>
+                                    <constraint firstAttribute="centerX" secondItem="Hal-TG-g6s" secondAttribute="centerX" id="Pic-sg-Pz2"/>
+                                    <constraint firstItem="kfi-WN-kFs" firstAttribute="top" secondItem="Spg-KO-ouX" secondAttribute="bottom" constant="18" id="S6B-Ab-Dmg"/>
+                                    <constraint firstAttribute="centerX" secondItem="Hal-TG-g6s" secondAttribute="centerX" id="WmJ-aS-IES"/>
+                                    <constraint firstAttribute="width" constant="300" id="kDf-me-vgs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.96470588239999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Hde-fh-1H4" secondAttribute="centerY" id="U8k-Uf-0mY"/>
+                            <constraint firstAttribute="centerX" secondItem="Hde-fh-1H4" secondAttribute="centerX" id="caT-X3-2Pz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resetButton" destination="kfi-WN-kFs" id="d1k-h1-XzV"/>
+                        <outlet property="startStopButton" destination="yfb-1h-oYH" id="6ih-LH-1Ut"/>
+                        <outlet property="switchToClockButton" destination="Hal-TG-g6s" id="Dj5-ax-f9G"/>
+                        <outlet property="timeLabel" destination="Spg-KO-ouX" id="IGD-5l-PbA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2h5-Em-IID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="414"/>
         </scene>
     </scenes>
 </document>
