@@ -26,7 +26,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="0f2-Fk-xl0" kind="show" id="nVr-gJ-43g"/>
+                                            <segue destination="0f2-Fk-xl0" kind="custom" customClass="CustomSegue" id="mKo-Ek-TNJ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7R-Fw-bNS">
@@ -55,7 +55,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="switchToStopwatchButton" destination="oNB-kF-blm" id="nLn-fz-DxV"/>
                         <outlet property="timeLabel" destination="o7R-Fw-bNS" id="Qm2-J3-ysp"/>
                     </connections>
                 </viewController>
@@ -84,6 +83,9 @@
                                             <color key="titleColor" red="0.14901960780000001" green="0.5450980392" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qJn-JR-KV1" kind="unwind" unwindAction="unwindFromViewController:" id="uIn-Cp-WQb"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spg-KO-ouX">
                                         <rect key="frame" x="59" y="80" width="183" height="58"/>
@@ -135,6 +137,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2h5-Em-IID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="qJn-JR-KV1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="692" y="414"/>
         </scene>

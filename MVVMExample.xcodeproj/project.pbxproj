@@ -17,6 +17,8 @@
 		30E725681AC0A7BE00B998BD /* DXNMasterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E725671AC0A7BE00B998BD /* DXNMasterViewModel.m */; };
 		30E7256B1AC0BC1B00B998BD /* DXNStopwatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7256A1AC0BC1B00B998BD /* DXNStopwatchViewController.m */; };
 		30E7256E1AC0BC2A00B998BD /* DXNStopwatchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E7256D1AC0BC2A00B998BD /* DXNStopwatchViewModel.m */; };
+		30E725731AC1A5AC00B998BD /* CustomSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E725701AC1A5AC00B998BD /* CustomSegue.m */; };
+		30E725741AC1A5AC00B998BD /* CustomUnwindSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E725721AC1A5AC00B998BD /* CustomUnwindSegue.m */; };
 		6857728239F38CB87270A01C /* libPods-MVVMExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE00B966D0D39D1224DDE79 /* libPods-MVVMExampleTests.a */; };
 		FB4900610DE3D64825A790A7 /* libPods-MVVMExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADA3163955245C7F4A63DD7 /* libPods-MVVMExample.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,10 @@
 		30E7256A1AC0BC1B00B998BD /* DXNStopwatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXNStopwatchViewController.m; sourceTree = "<group>"; };
 		30E7256C1AC0BC2A00B998BD /* DXNStopwatchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXNStopwatchViewModel.h; sourceTree = "<group>"; };
 		30E7256D1AC0BC2A00B998BD /* DXNStopwatchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXNStopwatchViewModel.m; sourceTree = "<group>"; };
+		30E7256F1AC1A5AC00B998BD /* CustomSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegue.h; sourceTree = "<group>"; };
+		30E725701AC1A5AC00B998BD /* CustomSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegue.m; sourceTree = "<group>"; };
+		30E725711AC1A5AC00B998BD /* CustomUnwindSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUnwindSegue.h; sourceTree = "<group>"; };
+		30E725721AC1A5AC00B998BD /* CustomUnwindSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUnwindSegue.m; sourceTree = "<group>"; };
 		64D71E774B3237951DE9D65D /* Pods-MVVMExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMExampleTests/Pods-MVVMExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		6ADA3163955245C7F4A63DD7 /* libPods-MVVMExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE00B966D0D39D1224DDE79 /* libPods-MVVMExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +138,10 @@
 				30E7256A1AC0BC1B00B998BD /* DXNStopwatchViewController.m */,
 				30E7256C1AC0BC2A00B998BD /* DXNStopwatchViewModel.h */,
 				30E7256D1AC0BC2A00B998BD /* DXNStopwatchViewModel.m */,
+				30E7256F1AC1A5AC00B998BD /* CustomSegue.h */,
+				30E725701AC1A5AC00B998BD /* CustomSegue.m */,
+				30E725711AC1A5AC00B998BD /* CustomUnwindSegue.h */,
+				30E725721AC1A5AC00B998BD /* CustomUnwindSegue.m */,
 				307585261AC081E10013852A /* Main.storyboard */,
 				307585291AC081E10013852A /* Images.xcassets */,
 				3075852B1AC081E10013852A /* LaunchScreen.xib */,
@@ -338,7 +348,9 @@
 				30E725681AC0A7BE00B998BD /* DXNMasterViewModel.m in Sources */,
 				307585221AC081E10013852A /* DXNAppDelegate.m in Sources */,
 				3075851F1AC081E10013852A /* main.m in Sources */,
+				30E725731AC1A5AC00B998BD /* CustomSegue.m in Sources */,
 				30E7256E1AC0BC2A00B998BD /* DXNStopwatchViewModel.m in Sources */,
+				30E725741AC1A5AC00B998BD /* CustomUnwindSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

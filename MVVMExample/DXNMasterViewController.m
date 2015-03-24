@@ -9,6 +9,8 @@
 #import "DXNMasterViewController.h"
 #import "DXNMasterViewModel.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "CustomSegue.h"
+#import "CustomUnwindSegue.h"
 
 @interface DXNMasterViewController ()
 
@@ -23,11 +25,19 @@
     
     self.viewModel = [[DXNMasterViewModel alloc] init];
     RAC(self.timeLabel, text) = RACObserve(self.viewModel, time);
-    [self.switchToStopwatchButton addTarget:self action:@selector(switchToStopwatch) forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)switchToStopwatch {
-    //[self push]
+// This is the IBAction method referenced in the Storyboard Exit for the Unwind segue.
+// It needs to be here to create a link for the unwind segue.
+// But we'll do nothing with it.
+- (IBAction)unwindFromViewController:(UIStoryboardSegue *)sender {
+}
+
+// We need to over-ride this method from UIViewController to provide a custom segue for unwinding
+- (UIStoryboardSegue *)segueForUnwindingToViewController:(UIViewController *)toViewController fromViewController:(UIViewController *)fromViewController identifier:(NSString *)identifier {
+    // Instantiate a new CustomUnwindSegue
+    CustomUnwindSegue *segue = [[CustomUnwindSegue alloc] initWithIdentifier:identifier source:fromViewController destination:toViewController];
+    return segue;
 }
 
 - (void)didReceiveMemoryWarning {
