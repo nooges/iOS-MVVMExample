@@ -26,6 +26,10 @@
     [self.startStopButton addTarget:self.viewModel action:@selector(toggleStopwatch) forControlEvents:UIControlEventTouchUpInside];
     [self.resetButton addTarget:self.viewModel action:@selector(resetStopwatch) forControlEvents:UIControlEventTouchUpInside];
     [self.switchToClockButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
+    [RACObserve(self.viewModel, startStopButtonText)
+        subscribeNext:^(NSString *buttonText) {
+            [self.startStopButton setTitle:buttonText forState:UIControlStateNormal];
+        }];
 }
 
 - (void)didReceiveMemoryWarning {

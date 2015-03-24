@@ -14,6 +14,7 @@
 @property (nonatomic) NSTimer *stopwatchTimer;
 @property (nonatomic) NSDate *startTime;
 @property (nonatomic) NSTimeInterval elapsedTime;
+@property (nonatomic) BOOL stopwatchRunning;
 
 @end
 
@@ -22,6 +23,7 @@
 - (id)init {
     if (self = [super init]) {
         _stopwatchRunning = NO;
+        _startStopButtonText = @"Start";
         _elapsedTime = 0.0;
         [self updateTimeFormat];
     }
@@ -33,12 +35,14 @@
         [self.stopwatchTimer invalidate];
         self.stopwatchTimer = nil;
         self.stopwatchRunning = NO;
+        self.startStopButtonText = @"Start";
         NSLog(@"Timer stopped");
     } else {
         // Start timer
         self.stopwatchTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/100.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
         self.startTime = [NSDate date];
         self.stopwatchRunning = YES;
+        self.startStopButtonText = @"Stop";
         NSLog(@"Timer started");
     }
 }

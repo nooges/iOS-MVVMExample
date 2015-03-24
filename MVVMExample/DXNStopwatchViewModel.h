@@ -11,7 +11,7 @@
 @interface DXNStopwatchViewModel : NSObject
 
 @property (nonatomic) NSString *time;
-@property (nonatomic) BOOL stopwatchRunning;
+@property (nonatomic) NSString *startStopButtonText;
 
 - (void)toggleStopwatch;
 - (void)resetStopwatch;

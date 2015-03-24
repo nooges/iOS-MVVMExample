@@ -21,6 +21,7 @@
     if (self = [super init]) {
         // Start timer
         _clockTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+        [self updateTime];
     }
     return self;
 }
