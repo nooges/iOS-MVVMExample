@@ -28,7 +28,10 @@
     [self.switchToClockButton addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     [RACObserve(self.viewModel, startStopButtonText)
         subscribeNext:^(NSString *buttonText) {
-            [self.startStopButton setTitle:buttonText forState:UIControlStateNormal];
+            [UIView performWithoutAnimation:^{
+                [self.startStopButton setTitle:buttonText forState:UIControlStateNormal];
+                [self.startStopButton layoutIfNeeded];
+            }];
         }];
 }
 
